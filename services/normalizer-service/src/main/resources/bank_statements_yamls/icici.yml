@@ -1,0 +1,11 @@
+bank_name: ICICI
+
+mappings:
+  transaction_id: transaction_id
+  date: date
+  description: description
+  amount: amount
+  type: txn_type
+  balance: balance
+  account_no: account_no
+  bank: bank

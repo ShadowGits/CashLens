@@ -1,0 +1,11 @@
+bank_name: HDFC
+
+mappings:
+  transaction_id: tx_id
+  date: date
+  description: narration
+  amount: amount
+  type: type
+  balance: balance
+  account_no: account_no
+  bank: bank

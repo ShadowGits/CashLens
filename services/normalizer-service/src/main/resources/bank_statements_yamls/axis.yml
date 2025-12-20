@@ -1,0 +1,11 @@
+bank_name: Axis
+
+mappings:
+  transaction_id: id
+  date: date
+  description: details
+  amount: amount
+  type: txn_type
+  balance: balance
+  account_no: account_no
+  bank: bank

@@ -1,20 +1,20 @@
+// root build.gradle.kts
 plugins {
-    id("java")
+    id("org.springframework.boot") version "3.2.2" apply false
+    id("io.spring.dependency-management") version "1.1.3" apply false
 }
 
-group = "com.aistuff"
-version = "1.0-SNAPSHOT"
+allprojects {
+    group = "com.aistuff"
+    version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-}
-
-tasks.test {
-    useJUnitPlatform()
+subprojects {
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
 }

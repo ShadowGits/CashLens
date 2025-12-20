@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-finance.ai/schemas/transaction.schema.json",
+  "title": "StandardizedTransactionBeforeCategorization",
+  "description": "schema for normalized financial transactions",
+  "type": "object",
+  "required": [
+    "transaction_id",
+    "date",
+    "description",
+    "amount",
+    "type",
+    "balance",
+    "account_no",
+    "bank"
+  ],
+  "properties": {
+    "transaction_id": {
+      "type": "string",
+      "description": "Unique ID for the transaction"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Transaction date (ISO format)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Free-text description or narration of transaction"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Transaction amount (positive value)"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["credit", "debit"],
+      "description": "Transaction type"
+    },
+    "balance": {
+      "type": "number",
+      "description": "Account balance after transaction"
+    },
+    "account_no": {
+      "type": "string",
+      "description": "Masked account number (e.g., XXXX1234)"
+    },
+    "bank": {
+      "type": "string",
+      "description": "Name of the bank this transaction belongs to"
+    }
+  },
+  "additionalProperties": false
+}
