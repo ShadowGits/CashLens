@@ -15,6 +15,8 @@ dependencies {
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     implementation("org.springframework.kafka:spring-kafka")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml")
+    implementation("org.apache.poi:poi-ooxml:5.2.5")
+
 
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
